@@ -83,7 +83,7 @@ export function HeroSection() {
             <div className="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 shadow-2xl group hover:border-neutral-700 transition duration-500">
               <div className="relative aspect-[16/9] w-full">
                 <Image
-                  src="/images/hero-ui.jpg"
+                  src="/images/hero-ui.webp"
                   alt="CoreAgent WhatsApp AI SaaS y Métricas en Tiempo Real"
                   fill
                   className="object-cover group-hover:scale-105 transition duration-700 ease-out"

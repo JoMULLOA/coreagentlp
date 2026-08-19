@@ -24,7 +24,7 @@ export function VisualShowcaseSection() {
         <div className="relative rounded-3xl overflow-hidden border border-neutral-800 bg-black shadow-2xl">
           <div className="relative aspect-[16/9] w-full">
             <Image
-              src="/images/dashboard-ui.jpg"
+              src="/images/dashboard-ui.webp"
               alt="Dashboard de Inbox en Tiempo Real CoreAgent AI"
               fill
               className="object-cover"
