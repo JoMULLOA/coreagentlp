@@ -1,59 +1,83 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import { Bot, MessageSquare, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, X, Bot, Sparkles } from "lucide-react";
 
 export function LandingNavbar() {
+  const [showBanner, setShowBanner] = useState(true);
+
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition">
-            <Bot className="w-5 h-5 text-white" />
+    <div className="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-neutral-800/80">
+      {/* Top Squarespace-style Announcement Bar */}
+      {showBanner && (
+        <div className="bg-neutral-900 border-b border-neutral-800 text-neutral-300 text-xs py-2 px-4 flex items-center justify-between font-mono">
+          <div className="mx-auto flex items-center gap-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Versión 2.0 Operacional disponible · PostgreSQL 16 + WhatsApp Cloud API ·</span>
+            <Link href="/terms" className="text-white underline hover:text-emerald-400 font-semibold transition">
+              TÉRMINOS Y CONDICIONES
+            </Link>
+          </div>
+          <button
+            onClick={() => setShowBanner(false)}
+            className="text-neutral-500 hover:text-white transition cursor-pointer"
+            aria-label="Cerrar aviso"
+          >
+            <X className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
+
+      {/* Main Header */}
+      <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        {/* Brand */}
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center font-bold shadow-md group-hover:scale-105 transition duration-200">
+            <Bot className="w-6 h-6 text-black" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-lg tracking-tight text-white flex items-center gap-1.5">
-              CoreAgent <span className="text-emerald-400 font-mono text-xs px-1.5 py-0.5 rounded bg-emerald-950 border border-emerald-800">AI</span>
+            <span className="font-extrabold text-xl tracking-tight text-white flex items-center gap-2">
+              COREAGENT <span className="text-[10px] font-mono font-bold bg-neutral-800 text-emerald-400 px-2 py-0.5 rounded border border-neutral-700">AI OPS</span>
             </span>
-            <span className="text-[10px] text-slate-400 tracking-wider uppercase font-medium">WhatsApp Ops SaaS</span>
           </div>
         </Link>
 
-        {/* Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <Link href="/#features" className="hover:text-emerald-400 transition">
+        {/* Navigation */}
+        <nav className="hidden md:flex items-center gap-9 text-sm font-medium tracking-wide text-neutral-400">
+          <Link href="#features" className="hover:text-white transition">
             Funcionalidades
           </Link>
-          <Link href="/#verticals" className="hover:text-emerald-400 transition">
+          <Link href="#showcase" className="hover:text-white transition">
+            Plataforma
+          </Link>
+          <Link href="#verticals" className="hover:text-white transition">
             Industrias
           </Link>
-          <Link href="/#architecture" className="hover:text-emerald-400 transition">
-            Seguridad & Arquitectura
+          <Link href="#pricing" className="hover:text-white transition">
+            Precios
           </Link>
-          <Link href="/#pricing" className="hover:text-emerald-400 transition">
-            Planes
-          </Link>
-          <Link href="/#faq" className="hover:text-emerald-400 transition">
+          <Link href="#faq" className="hover:text-white transition">
             FAQ
           </Link>
         </nav>
 
-        {/* Action Buttons */}
-        <div className="flex items-center gap-3">
+        {/* Action Button */}
+        <div className="flex items-center gap-4">
           <Link
             href="/terms"
-            className="hidden sm:inline-flex items-center text-xs text-slate-400 hover:text-slate-200 transition"
+            className="hidden sm:inline-block text-xs font-mono text-neutral-400 hover:text-white transition"
           >
-            Términos y Condiciones
+            LEGAL & SLA
           </Link>
           <Link
             href="#pricing"
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-lg transition shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/40"
+            className="px-5 py-2.5 bg-white hover:bg-neutral-200 text-black font-bold text-xs uppercase tracking-wider rounded-lg transition shadow-md hover:shadow-lg"
           >
-            <span>Comenzar Ahora</span>
-            <ArrowRight className="w-4 h-4" />
+            Comenzar Ahora
           </Link>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 }

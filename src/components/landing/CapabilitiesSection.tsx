@@ -54,17 +54,17 @@ export function CapabilitiesSection() {
   ];
 
   return (
-    <section id="features" className="py-20 bg-slate-900/50 border-y border-slate-800/80">
+    <section id="features" className="py-24 bg-black border-t border-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-emerald-400 font-mono">
-            Arquitectura de Grado Empresarial
-          </h2>
-          <p className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            El modelo interpreta, las herramientas ejecutan y la base de datos manda.
+        <div className="max-w-3xl mb-16 space-y-4">
+          <p className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400">
+            Capacidades del Sistema
           </p>
-          <p className="text-base text-slate-300">
-            Diseñado para empresas que necesitan fiabilidad matemática y control operacional, no simples respuestas de texto genéricas.
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+            El modelo interpreta, las herramientas ejecutan y la base de datos manda.
+          </h2>
+          <p className="text-base text-neutral-400 font-light">
+            Diseñado para empresas que necesitan fiabilidad matemática y control operacional.
           </p>
         </div>
 
@@ -74,23 +74,21 @@ export function CapabilitiesSection() {
             return (
               <div
                 key={idx}
-                className="bg-slate-950/70 rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/50 transition duration-300 hover:shadow-xl hover:shadow-emerald-500/5 group flex flex-col justify-between"
+                className="bg-neutral-950 p-8 rounded-3xl border border-neutral-900 hover:border-neutral-700 transition duration-300 flex flex-col justify-between space-y-6"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-700/80 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500/10 group-hover:border-emerald-500/30 transition">
+                    <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-slate-900 border border-slate-700 text-slate-300">
+                    <span className="text-[11px] font-mono font-semibold px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300">
                       {cap.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition">
-                    {cap.title}
-                  </h3>
+                  <h3 className="text-xl font-bold text-white">{cap.title}</h3>
 
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm text-neutral-400 leading-relaxed font-light">
                     {cap.description}
                   </p>
                 </div>
