@@ -25,7 +25,7 @@ export function VisualShowcaseSection() {
           <div className="relative aspect-[16/9] w-full">
             <Image
               src="/images/dashboard-ui.webp"
-              alt="Dashboard de Inbox en Tiempo Real CoreAgent AI"
+              alt="Dashboard de Inbox en Tiempo Real Tentaculus"
               fill
               className="object-cover"
             />

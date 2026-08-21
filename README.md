@@ -1,6 +1,6 @@
-# CoreAgent AI — Landing Page
+# Tentaculus — Landing Page
 
-Landing page oficial de presentación y conversión para la plataforma SaaS **CoreAgent AI** (WhatsApp AI Ops para Empresas).
+Landing page oficial de presentación y conversión para la plataforma SaaS **Tentaculus** (WhatsApp AI Ops para Empresas).
 
 ## 🚀 Despliegue en Vercel
 

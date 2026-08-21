@@ -84,7 +84,7 @@ export function HeroSection() {
               <div className="relative aspect-[16/9] w-full">
                 <Image
                   src="/images/hero-ui.webp"
-                  alt="CoreAgent WhatsApp AI SaaS y Métricas en Tiempo Real"
+                  alt="Tentaculus WhatsApp AI SaaS y Métricas en Tiempo Real"
                   fill
                   className="object-cover group-hover:scale-105 transition duration-700 ease-out"
                   priority
